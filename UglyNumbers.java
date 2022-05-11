@@ -2,11 +2,13 @@ public class UglyNumbers {
     /**
      * Returns the nth ugly number (an ugly number is one whose only prime
      * factors are 2, 3, or 5).
-     * @param idx the index of the ugly number
-     * @return the idxth ugly number
+     * time: O(nlog(n)) b/c n iterations with log(n) operations per iteration
+     * space: O(n) b/c the table is approximately n elements long
+     * @param n the index of the ugly number
+     * @return the nth ugly number
      */
-    public static int uglyNumbers(int idx) {
-        int[] table = new int[idx + 1];
+    public static int uglyNumbers(int n) {
+        int[] table = new int[n + 1];
         int currNum = 1;
         for (int i = 1; i < table.length; i++) {
             boolean currSpotFound = false;
@@ -32,11 +34,8 @@ public class UglyNumbers {
                 }
             }
         }
-        return table[idx];
+        return table[n];
     }
-
-    // my solution has O(nlog(n)) time complexity with O(n) space complexity
-    // to elaborate, for time complexity, n iterations with log(n) operations per
 
     public static void main(String[] args) {
         System.out.println(UglyNumbers.uglyNumbers(7)); //expect: 8
