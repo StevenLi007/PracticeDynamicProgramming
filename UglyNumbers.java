@@ -35,8 +35,8 @@ public class UglyNumbers {
         return table[idx];
     }
 
-    // my solution should be O(nlogn) time complexity with O(n) space complexity
-    // to elaborate, for time complexity, n iterations with logn operations per
+    // my solution has O(nlog(n)) time complexity with O(n) space complexity
+    // to elaborate, for time complexity, n iterations with log(n) operations per
 
     public static void main(String[] args) {
         System.out.println(UglyNumbers.uglyNumbers(7)); //expect: 8
